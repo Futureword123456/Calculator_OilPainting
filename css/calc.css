@@ -1,0 +1,45 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+div{
+    width: 170px;
+}
+#div1{
+    top: 60px;
+    left: 100px;
+    position: absolute;
+    border: 1px solid;
+    
+}
+input[type="button"]{
+    width: 25px;
+    margin-right:5px;
+
+}
+input[type="text"]{
+    width: 159px;
+    text-align: right;
+    background-color: white;
+    border: 1px solid;
+}
+#la{
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+a:hover{
+    background-color: aqua;
+    font-size: 30px;
+
+}
+a::selection{
+    background-color: blue;
+
+}
+/*a:focus{*/
+/*    background-color: yellow;*/
+/*!*}*!*/
+/*!*a:active{*!*/
+/*!*    background-color: black;*!*/
+/*!*}*!*/

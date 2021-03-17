@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom</title>
+    <script src="../jQuery/jquery-3.5.1.js" type="text/javascript"></script>
+</head>
+<body>
+<label for="username"></label><input type="text" name="username" id="username" class="input-class" my-user='yang' value="我用户名">
+<label for="password"></label><input type="text" name="password" id="password">
+    <p class="area-city">北京</p>
+    <p style="color: red">上海</p>
+    <p class="area">南京<span>测试睡觉</span></p>
+    <p class="area" id="shenzhen" style="display: none">深圳</p>
+    <p class="info" id="info">
+        <span>内容：</span>
+        <small>我脑子</small>
+    </p>
+<script>
+    $(function () {
+        var plist=$('p');
+        // var p0=plist.get(0);
+        // console.log(p0);
+        // var p1=plist.get(1);
+        // console.log(p1);
+        // var p2=plist.get(2);
+        // console.log(p2);
+        //for循环
+        for (var i=0;i<plist.length;i++){
+            var item = plist[i];
+            console.log(item);
+        }
+        //each循环
+        console.log('---------------------------');
+        plist.each(function (index,value) {
+            console.log(index,value);
+        });
+        console.log('---------------------------');
+        $.each(plist,function (index,value) {
+            console.log(index,value);
+        });
+        //find使用
+        const list=plist.find('span');
+        console.log(list);
+        const htmlDom = $('<p class="test"/>');
+        console.log(htmlDom);
+        //添加到html
+        //html.appendTo('body');
+        //$('body').append(htmlDom);
+        // htmlDom.html('<span>我是新加的</span>');
+        // $('body').append(htmlDom)
+        //$('#shenzhen').html('<span>我是新加的</span>');
+
+        htmlDom.append('<span>我是新加的</span>').val();
+        $('body').append(htmlDom);
+        //添加class
+        jQuery('#shenzhen').addClass('666');
+        //删除class
+        $('#shenzhen').removeClass('666');
+        //添加css
+        $('#shenzhen').css({
+            'color':'#ff3d46',
+            'background-color':'#566eff'
+        });
+        $('#shenzhen').show();
+        //$('#shenzhen').hidden();
+    })
+</script>
+</body>
+</html>

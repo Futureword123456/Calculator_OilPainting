@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询dom</title>
+    <script src="../jQuery/jquery-3.5.1.js" type="text/javascript"></script>
+</head>
+<body>
+    <input type="text" name="username" id="username" class="input-class" my-user='yang' value="我用户名">
+    <input type="text" name="password" id="password">
+    <p class="area-city">北京</p>
+    <p style="color: red">上海</p>
+    <p class="area">南京</p>
+    <p class="area" id="shenzhen">深圳</p>
+    <p class="info" id="info">
+        <span>内容：</span>
+        <small>我脑子</small>
+    </p>
+    <script>
+        jQuery(function () {
+            //class属性
+            var username = $('#username').attr('class');
+            console.log(username);
+            //type属性
+            var tys= jQuery('#username').attr('type');
+            console.log(tys);
+            //自定义属性
+           var user= $('#username').attr('my-user');
+           console.log(user);
+           //name属性
+            var na=$('#username').attr('name');
+            console.log(na);
+            //html信息
+            var htmll=$('#info').html();
+            console.log(htmll);
+            //text信息
+            const  textt = $('#info').text();
+            console.log(textt);
+            //表单
+            const form = $('#username').val();
+            console.log(form);
+            //Jquery转化为原生的dom对象
+            const usern = $('#username');
+            console.log(usern);
+            console.log(usern.get()[0].value);
+        })
+    </script>
+</body>
+</html>

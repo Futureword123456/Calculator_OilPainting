@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery选择器</title>
+    <link rel="stylesheet" href="">
+    <script src="../jQuery/jquery-3.5.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //文档加载完成后执行
+        jQuery(function () {
+            //id选择器的使用
+            var username = $('#username');
+            console.log(username);
+            //class选择器
+            var areaList = $('.area');
+            console.log(areaList);
+            //根据元素标签进行查询
+            var plist = jQuery('p');
+            console.log(plist);
+            //伪类的选择器
+            var pfirst = $('p:first');
+            console.log(pfirst);
+            //根据属性来查询
+            var password = $('input[name="password"]');
+            console.log(password)
+
+        });
+        // $(function () {
+        //     $(document).ready(function () {
+        //         //jquery内容用id
+        //         var username = $('#username');
+        //         console.log(username);
+        //         //class选择器
+        //         var areaList = $('.area');
+        //         console.log(areaList);
+        //         //根据元素标签进行查询
+        //         var plist = $('p');
+        //         console.log(plist);
+        // })
+        // $(document).ready(function () {
+        //     //jquery内容用id
+        //     var username = $('#username');
+        //     console.log(username);
+        //     //class选择器
+        //     var areaList = $('.area');
+        //     console.log(areaList);
+        //     //根据元素标签进行查询
+        //     var plist = $('p');
+        //     console.log(plist);
+        // })
+    </script>
+</head>
+<body>
+    <input type="text" name="username" id="username">
+    <input type="text" name="password" id="password">
+    <p class="area-city">北京</p>
+    <p>上海</p>
+    <p class="area">南京</p>
+    <p class="area" id="shenzhen">深圳</p>
+
+</body>
+</html>

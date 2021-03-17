@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="username"></label><input type="text" name="username" id="username">
+<p class="area">北京</p>
+<p>上海</p>
+<p class="area">南京</p>
+<p class="area">深圳</p>
+
+<script type="text/javascript">
+    //根据id查询
+    var username = document.getElementById('username');
+    console.log(username);
+    //根据class 进行查询
+    var area = document.getElementsByClassName('area');
+    for ( var i=0;i<3;i++){
+        console.log(area);
+    }
+    //使用p标签进行查询
+    var pList =document.getElementsByTagName('p');
+    console.log(pList);
+    //jquery中id选择器
+    // var $=function (id) {
+    //     return document.getElementById(id)
+    // };
+    //console.log($('username'));
+    var $ = function(name){
+        return document.getElementsByClassName(name);
+    };
+    // console.log($('area'));
+    console.log($('area'));
+
+</script>
+
+</body>
+</html>
